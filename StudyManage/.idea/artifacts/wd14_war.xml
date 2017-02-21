@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="StudyManage:war">
+  <artifact type="war" name="wd14:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="wd14.war">
-      <element id="artifact" artifact-name="StudyManage:war exploded" />
+      <element id="artifact" artifact-name="wd14:war exploded" />
     </root>
   </artifact>
 </component>

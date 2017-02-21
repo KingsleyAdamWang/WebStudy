@@ -6,25 +6,43 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
+    <!--用于扫描组件-->
     <context:component-scan base-package="controller"/>
-
-    <!--&lt;!&ndash; 静态资源(js、image等)的访问 &ndash;&gt;-->
-    <!--<mvc:default-servlet-handler/>-->
-
-    <!--&lt;!&ndash; 开启注解 &ndash;&gt;-->
-    <!--<mvc:annotation-driven/>-->
+    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="dao"/>
+    <context:component-scan base-package="bean"/>
+    <context:component-scan base-package="intercepter"/>
 
 
-    <!--&lt;!&ndash; HandlerMapping 根据benaname找到对应的controller &ndash;&gt;-->
-    <!--<bean class="org.springframework.web.servlet.mvc.support.ControllerBeanNameHandlerMapping"/>-->
+    <!--静态资源过滤-->
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/fonts/" mapping="/fonts/**"/>
 
-    <!-- controller 配置处理器 -->
-    <!--<bean name="/" class="controller.HelloController"/>-->
+    <!-- 开启注解 初始化三个转换器-->
+    <mvc:annotation-driven/>
+
+    <!--包含JSON的转化器-->
+    <context:annotation-config />
+
+
 
     <!-- ViewResolver 视图解析器  -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 前缀 和 后缀 -->
         <property name="prefix" value="/"/>
-        <property name="suffix" value=".jsp"/>
+        <!--<property name="suffix" value=".jsp"/>-->
     </bean>
+
+    <!--&lt;!&ndash;自定义拦截器&ndash;&gt;-->
+    <!--<mvc:interceptors>-->
+        <!--<bean class="intercepter.IPIntercepter"></bean>-->
+        <!--&lt;!&ndash;<mvc:interceptor>&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash; 匹配的是url路径， 如果不配置或/**,将拦截所有的Controller &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;<mvc:mapping path="/**" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="intercepter.IPIntercepter"></bean>&ndash;&gt;-->
+        <!--&lt;!&ndash;</mvc:interceptor>&ndash;&gt;-->
+        <!--&lt;!&ndash; 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 &ndash;&gt;-->
+    <!--</mvc:interceptors>-->
 </beans>
