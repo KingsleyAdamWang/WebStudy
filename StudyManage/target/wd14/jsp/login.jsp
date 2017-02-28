@@ -22,7 +22,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 text-center">
-                <h1 class="header">蓝鲸网，培训圆梦</h1>
+                <div class="header text-center">
+                    <a href="index.jsp"><img class="img-header img-responsive" src="${basePath}/img/header.png"></a>
+                </div>
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#individual_login" data-toggle="tab">学员登录</a></li>
                     <li><a href="#institution_login" data-toggle="tab">机构登录</a></li>
@@ -47,7 +49,7 @@
                                 </div>
                                 <div class="btn-choose">
                                     <button class="btn btn-success pull-left">登录</button>
-                                    <button class="btn btn-danger pull-right register">注册</button>
+                                    <a class="btn btn-danger pull-right" href="register.jsp">注册</a>
                                 </div>
                             </form>
                         </div>
@@ -70,7 +72,7 @@
                                 </div>
                                 <div class="btn-choose">
                                     <button class="btn btn-success pull-left">登录</button>
-                                    <button class="btn btn-danger pull-right register">注册</button>
+                                    <a class="btn btn-danger pull-right" href="register.jsp">注册</a>
 
                                 </div>
                             </form>
@@ -86,12 +88,7 @@
 <script type="text/javascript" src="${basePath}/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${basePath}/js/footer-responsive.js"></script>
 <script type="text/javascript">
-    $(".register").click(function () {
-        alert("hello123");
 
-        document.location.href="http://www.baidu.com";
-        //location.href="${basePath}/jsp/register.jsp";
-    });
 </script>
 </body>
 </html>

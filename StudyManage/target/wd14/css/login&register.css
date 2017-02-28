@@ -1,5 +1,9 @@
-h1.header{
+@charset "utf-8";
+.img-header{
     margin: 30px auto;
+    background-color: rgba(91, 192, 222, 0.31);
+    box-shadow: 0 1px 1px 3px rgba(91, 192, 222, 0.31);
+    border-radius: 5px;
 }
 
 form {
@@ -91,9 +95,9 @@ input:focus {
     background-color: rgba(91, 192, 222, 0.31);
 }
 
-.btn-choose button {
+.btn-choose .btn {
     width: 30%;
-    margin: 10px 30px;
+    margin: 10px 10%;
 }
 
 div.form-group{

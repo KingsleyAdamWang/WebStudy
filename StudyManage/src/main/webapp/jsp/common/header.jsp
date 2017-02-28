@@ -34,12 +34,12 @@
         <div class="container-fluid">
 
             <ul id="collapse" class="nav navbar-nav collapse navbar-collapse">
-                <li><a class="active" href="#">选项</a></li>
-                <li><a href="#">选项</a></li>
-                <li><a href="#">选项</a></li>
-                <li><a href="#">选项</a></li>
-                <li><a href="#">选项</a></li>
-                <li><a href="#">选项</a></li>
+                <li><a id="index" class="active" href="index.jsp"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a></li>
+                <li><a href="#"><span></span>&nbsp;&nbsp;选项</a></li>
+                <li><a href="#"><span></span>&nbsp;&nbsp;选项</a></li>
+                <li><a href="#"><span></span>&nbsp;&nbsp;选项</a></li>
+                <li><a href="#"><span></span>&nbsp;&nbsp;选项</a></li>
+                <li><a id="about" href="about.jsp"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;关于</a></li>
             </ul>
 
             <span class="navbar-text navbar-right">

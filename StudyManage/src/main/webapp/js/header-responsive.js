@@ -14,8 +14,7 @@ function responsive_navbar() {
 
     //头部和下面的内容分离
     var navbar_height = $(".navbar.navbar-default.navbar-fixed-top").height();
-
-    $("#main").css("marginTop",navbar_height+"px");
+    $(".main").css("marginTop",navbar_height+"px");
 }
 
 responsive_navbar();

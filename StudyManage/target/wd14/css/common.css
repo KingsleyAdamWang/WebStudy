@@ -1,6 +1,13 @@
+@charset "utf-8";
+
+/*通用字体设置*/
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+    color: #666;
+}
 
 body{
-    background: url("../img/bg2.jpg") center no-repeat;
+    background: url("../img/bg.jpg") center no-repeat;
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
