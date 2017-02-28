@@ -11,7 +11,13 @@ function responsive_navbar() {
     } else {
         $("#collapse").after(loginPart);
     }
+
+    //头部和下面的内容分离
+    var navbar_height = $(".navbar.navbar-default.navbar-fixed-top").height();
+
+    $("#main").css("marginTop",navbar_height+"px");
 }
 
 responsive_navbar();
 $(window).resize(responsive_navbar);
+

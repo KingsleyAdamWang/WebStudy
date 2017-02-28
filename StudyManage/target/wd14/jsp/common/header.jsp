@@ -43,9 +43,9 @@
             </ul>
 
             <span class="navbar-text navbar-right">
-                <span><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></span>
+                <span><a href="${basePath}/jsp/login.jsp"><span class="glyphicon glyphicon-log-in"></span> 登录</a></span>
                 <span>|</span>
-                <span><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></span>
+                <span><a href="${basePath}/jsp/register.jsp"><span class="glyphicon glyphicon-user"></span> 注册</a></span>
             </span>
 
             <div id="navbar-search-form" class="navbar-form nav-justified navbar-right collapse navbar-collapse">

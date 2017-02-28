@@ -1,5 +1,7 @@
+
+
 .navbar {
-    background-color: #d9edf7;
+    background-color: rgba(64,75,97, 0.7);
 }
 
 #collapse .active {
@@ -17,7 +19,7 @@
 }
 
 #collapse a {
-    color: rgb(179, 179, 179);
+    color: rgb(254, 222, 104);
     font-weight: bold;
 }
 
@@ -32,25 +34,7 @@
     border: #2aabd2;
 }
 
-/*span.navbar-text.navbar-right{*/
-/*padding: inherit;*/
-/*margin: auto;*/
-/*}*/
+.navbar span a{
+    color: rgb(254, 222, 104);;
+}
 
-/*placeholder color*/
-/*input::-webkit-input-placeholder {*/
-/*　　color: #33cdfc !important;*/
-/*}*/
-
-/*input:-moz-placeholder {*/
-/*　　color: #33cdfc !important;*/
-/*}*/
-
-/*input::-moz-placeholder {*/
-/*　　color: #33cdfc !important;*/
-/*}*/
-
-/*input:-ms-input-placeholder {*/
-/*　　color: #33cdfc !important;*/
-/*}*/
-/*placeholder color*/
