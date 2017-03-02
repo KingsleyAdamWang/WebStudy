@@ -10,10 +10,10 @@
 <div class="footer text-center">
     <p>企业培训 | 合作事宜 | 版权投诉</p>
     <p>技术支持：
-        <a href="">Bootstrap</a> |
-        <a href="">菜鸟教程</a> |
-        <a href="">EasyUI</a> |
-        <a href="">GitHub</a> |
+        <a href="http://www.bootcss.com/" target="_blank">Bootstrap</a> |
+        <a href="http://www.runoob.com/" target="_blank">菜鸟教程</a> |
+        <a href="http://www.jeasyui.net/" target="_blank">EasyUI</a> |
+        <a href="https://github.com/" target="_blank">GitHub</a> |
     </p>
     <p> all rights reserved </p>
 </div>

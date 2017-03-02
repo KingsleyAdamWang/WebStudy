@@ -220,6 +220,14 @@
                 interval: 2000
             }
         );
+        
+        
+        $("a.navbar-brand.logo").mouseenter(function () {
+            $(this).addClass("open");
+        });
+//        $("a.navbar-brand.logo").mouseleave(function () {
+//            $(this).removeClass("open");
+//        });
     </script>
 </body>
 </html>
