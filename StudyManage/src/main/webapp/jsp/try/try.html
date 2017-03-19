@@ -29,9 +29,26 @@
         <!--</div>-->
     <!--</div>-->
 <!--</div>-->
-
-<input type="file">
+<button onclick="test()">test</button>
 <script src="/js/jquery-3.1.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function test() {
+        $.ajax({
+            type: "GET",
+            url:"http://120.76.102.185:8456/Service1.svc/countChart",
+            data:{typeId: 'null', type: 'ch', date: 'month'},
+            dataType:"json",
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+            success: function(data) {
+                document.write(data.toString());
+            }
+        });
+    }
+</script>
 </body>
 </html>

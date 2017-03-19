@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    function test() {
+        $.ajax({
+            type: "POST",
+            url:"/test",
+            data:{username:"username"},
+            dataType:"json",
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+            success: function(data) {
+                alert(data.state+"+"+data.obj);
+            }
+        });
+    }
+
+    $(function () {
+        test();
+    })
+</script>
+</body>
+</html>

@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" session="false"%>
+<%@include file="common/taglib.jsp" %>
+
 <html>
 <head>
     <title>课程</title>
@@ -33,6 +35,8 @@
 <script type="text/javascript">
     $("div.navbar ul a").removeClass("active");
     $("div.navbar ul a#course").addClass("active");
+
 </script>
+
 </body>
 </html>

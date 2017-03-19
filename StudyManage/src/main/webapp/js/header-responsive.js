@@ -45,8 +45,8 @@ function login_check() {
 
     }
 }
-//加载完文档检测登录状态
-$(function () {
-   login_check();
-});
+// //加载完文档检测登录状态
+// $(function () {
+//    login_check();
+// });
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <bean id="mysqlDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/testlink?characterEncoding=utf8&amp;useSSL=true"/>
+
+        <property name="user" value="root"/>
+        <property name="password" value="root"/>
+
+        <property name="maxPoolSize" value="40"/>
+        <property name="minPoolSize" value="1"/>
+        <property name="initialPoolSize" value="1"/>
+        <property name="maxIdleTime" value="20"/>
+
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+
+        <property name="dataSource" ref="mysqlDataSource"/>
+        <!-- 自动扫描注解方式配置的hibernate类文件 -->
+        <property name="packagesToScan">
+            <list>
+                <value>bean</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+
+            <value>
+                <!-- 设置数据库方言 -->
+                hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+                <!-- 设置自动创建|更新|验证数据库表结构 -->
+                hibernate.hbm2ddl.auto=update
+                <!-- 是否在控制台显示sql -->
+                hibernate.show_sql=true
+                <!-- 是否格式化sql，优化显示 -->
+                hibernate.format_sql=true
+
+                <!-- 创建session方式 hibernate4.x 的方式 -->
+                javax.persistence.validation.mode=none
+            </value>
+
+        </property>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!-- 需要引入tx的命名空间 -->
+</beans>
