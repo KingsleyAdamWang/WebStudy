@@ -1,8 +1,10 @@
 package controller;
 
+import bean.Message;
 import contant.Keys;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,4 +26,5 @@ public class BaseController {
         request.setAttribute(Keys.EXCEPTION_MSG,ex.getMessage());
         return "exception";
     }
+
 }

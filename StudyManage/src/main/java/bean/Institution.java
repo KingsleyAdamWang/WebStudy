@@ -12,6 +12,7 @@ import java.util.List;
 @Table(name = "institution")
 public class Institution implements Serializable{
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(length = 20)
@@ -22,6 +23,9 @@ public class Institution implements Serializable{
 
     @Column(length = 20)
     private String ownerName;
+
+    @Column(length = 40)
+    private String ownerIdentityId;
 
     @Column(length = 20)
     private String tel;
@@ -148,6 +152,14 @@ public class Institution implements Serializable{
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    public String getOwnerIdentityId() {
+        return ownerIdentityId;
+    }
+
+    public void setOwnerIdentityId(String ownerIdentityId) {
+        this.ownerIdentityId = ownerIdentityId;
     }
 
     public List<InstitutionLog> getLogs() {

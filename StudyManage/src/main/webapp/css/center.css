@@ -1,0 +1,77 @@
+
+.main div.navdiv .nav-pills>li>a{
+    border-radius: 5px ;
+    background-color: rgba(191, 255, 250, 0.56);
+    margin-bottom: 0px;
+}
+
+.nav-pills>li>a{
+    font-weight: bolder;
+}
+
+
+.nav-pills>li{
+    background-color: transparent;
+}
+
+
+
+
+.nav-pills>li>a:hover{
+    background-color: rgba(24, 227, 46, 0.38);
+    font-size: larger;
+    color: #1b6d85;
+}
+.nav-pills>li.active>a{
+    background-color: rgba(24, 227, 46, 0.38);
+    color: #1b6d85;
+    font-size: larger;
+}
+.nav-pills>li.active>a:visited{
+    color: #1b6d85;
+}
+.nav-pills>li.active>a:hover{
+    color: #1b6d85;
+}
+.nav-pills>li.active>a:active{
+    color: #1b6d85;
+}
+
+div.back-page{
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+div.back-page>a:hover{
+    background-color: rgba(191, 255, 250, 0.56);
+    text-decoration: none;
+
+}
+
+.tab-content{
+    margin-top: 10%;
+}
+
+
+
+.head-preview>img{
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 2px 3px white;
+}
+/**没有以小于**/
+/**小屏幕 平板 大于等于768px**/
+@media (min-width: 768px) {
+
+}
+
+/**中等屏幕 桌面显示器 大于等于 992px**/
+@media (min-width: 992px) {
+
+}
+
+/**大屏幕 桌面显示器 大于等于 1200px**/
+@media (min-width: 1200px) {
+
+}

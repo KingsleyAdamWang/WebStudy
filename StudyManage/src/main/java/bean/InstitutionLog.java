@@ -12,6 +12,7 @@ import java.util.Date;
 @Table(name = "institution_log")
 public class InstitutionLog implements Serializable{
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne

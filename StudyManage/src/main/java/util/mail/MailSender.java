@@ -1,6 +1,7 @@
 package util.mail;
 
 import javax.mail.*;
+import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;

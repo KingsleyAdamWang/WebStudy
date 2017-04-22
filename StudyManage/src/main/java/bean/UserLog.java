@@ -13,6 +13,7 @@ import java.util.Date;
 @Table(name = "user_log")
 public class UserLog implements Serializable{
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne

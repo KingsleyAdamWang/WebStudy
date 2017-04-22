@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .navbar {
-    background-color: rgba(64,75,97, 0.7);
+    background-color: rgba(64, 75, 97, 0.7);
 }
 
 #collapse .active {
@@ -34,6 +34,32 @@
     border: #2aabd2;
 }
 
-.navbar span a{
+.navbar span a {
     color: rgb(254, 222, 104);;
+}
+
+img.head {
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+div.navbar>div.container>div.container-fluid>div.logged{
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+div.navbar>div.container>div.container-fluid>div.logged span{
+    margin: auto 5px;
+}
+
+div.navbar>div.container>div.container-fluid>div.logged span.type{
+    height: 30px;
+    padding: 5px;
+    display: inline-block;
+    background-color: #44a2ff;
+    border: white 2px;
+    border-radius: 3px;
 }

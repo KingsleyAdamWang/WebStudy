@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 
 public class HelloController {
     @Resource
-    TestService testService;
+    private TestService testService;
     @RequestMapping(method = RequestMethod.GET,value = "/hello")
     public String printHello(ModelMap model) {
         model.addAttribute("hello", "Spring MVC Hello World");

@@ -5,6 +5,9 @@
 function responsive_navbar() {
     var loginPart = $("div.navbar-text.navbar-right");
 
+    if ($(window).width<1200){
+        $("#navbar-search-form").remove();
+    }
     if ($(window).width() <= 768) {
         loginPart.css("float", "right");
         loginPart.css("marginLeft","10px");
@@ -25,28 +28,26 @@ function responsive_navbar() {
 responsive_navbar();
 $(window).resize(responsive_navbar);
 
-function login_check() {
-    if(true){
-        var loginPart = $("div.navbar-text.navbar-right");
-        loginPart.empty();
-        var user = $("<a href='center.jsp'><img class='img-circle' alt='head'></a>");
-
-        loginPart.addClass("dropdown");
-        user.addClass("dropdown-toggle");
-        user.attr({"data-toggle":"dropdown"});
-
-        var list = $("<ul class='dropdown-menu'></ul>");
-        var li_1 = $("<li><a href='#'>个人中心</a></li>");
-        var li_2 = $("<li><a href='#'>安全中心</a></li>");
-        var li_3 = $("<li><a href='#'>balabala</a></li>");
-        list.append(li_1,li_2,li_3);
-        loginPart.append(user,list);
-
-
-    }
-}
-// //加载完文档检测登录状态
-// $(function () {
-//    login_check();
-// });
+// function login_check() {
+//     if(true){
+//         var loginPart = $("div.navbar-text.navbar-right");
+//         loginPart.empty();
+//         var user = $("<a href='center.jsp'><img class='img-circle' alt='head'></a>");
+//
+//         loginPart.addClass("dropdown");
+//         user.addClass("dropdown-toggle");
+//         user.attr({"data-toggle":"dropdown"});
+//
+//         var list = $("<ul class='dropdown-menu'></ul>");
+//         var li_1 = $("<li><a href='#'>个人中心</a></li>");
+//         var li_2 = $("<li><a href='#'>安全中心</a></li>");
+//         var li_3 = $("<li><a href='#'>balabala</a></li>");
+//         list.append(li_1,li_2,li_3);
+//         loginPart.append(user,list);
+//     }
+// }
+//加载完文档检测登录状态
+$(function () {
+   login_check();
+});
 

@@ -101,8 +101,15 @@ input:focus {
 }
 
 div.form-group{
-    margin: 30px auto;
+    margin: 30px auto 0px auto;
 }
 
+div.alert{
+    margin: 2px auto 10px auto;
+    height: 10px;
+    text-align: center;
+    line-height: 0;
+    background-color: rgba(252,23,8,0.24);
+}
 
 
